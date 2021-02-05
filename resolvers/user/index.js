@@ -4,6 +4,7 @@ module.exports = {
   },
   Mutation: {
     register: require('./register'),
-    login: require('./login')
+    login: require('./login'),
+    saveData: require('./saveData')
   }
 }

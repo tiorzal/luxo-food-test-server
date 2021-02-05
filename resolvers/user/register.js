@@ -3,10 +3,10 @@ const { User } = require('../../models');
 module.exports = async (_, args) => {
   try {
     console.log(args);
-    const { firstName, lastName, password, email } = args.data;
+    const { firstname, lastname, password, email } = args.data;
     const newUserData = {
-      firstName,
-      lastName,
+      firstname,
+      lastname,
       password,
       email,
     };

@@ -19,4 +19,8 @@ module.exports = gql`
   type Token {
     token: String
   }
+
+  type DataUser {
+    data: String
+  }
 `
