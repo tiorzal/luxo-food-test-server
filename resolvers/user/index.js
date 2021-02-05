@@ -1,6 +1,6 @@
 module.exports = {
   Query: {
-
+    loadData: require('./loadData')
   },
   Mutation: {
     register: require('./register'),
