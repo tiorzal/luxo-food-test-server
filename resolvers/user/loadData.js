@@ -1,4 +1,4 @@
-const { User } = require('../../models');
+const { User, Sheet } = require('../../models');
 const authentication = require('../../middlewares/authentication')
 
 module.exports = authentication(async (_, __, { user }) => {
@@ -6,8 +6,8 @@ module.exports = authentication(async (_, __, { user }) => {
   try {
     console.log(user);
     
-    const userFromDb = await User.findByPk(user.id)
-    
+    const userFromDb = await User.findByPk(user.id, {include: [Sheet]})
+    console.log(userFromDb);
     return userFromDb
   } catch (error) {
     return error;

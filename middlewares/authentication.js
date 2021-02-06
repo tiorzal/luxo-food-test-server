@@ -3,6 +3,7 @@ const { tokenVerify } = require('../helpers/jwtHelper');
 const { User } = require('../models');
 
 const authentication = (next) => async (root, args, context, info) => {
+
   const token = context.req.headers.token;
   if (token) {
     const useFromToken = tokenVerify(token);

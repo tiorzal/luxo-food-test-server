@@ -14,7 +14,7 @@ module.exports = gql`
     password: String
     firstname: String
     lastname: String
-    data: String
+    Sheets: [Sheet]
   }
 
   type Token {

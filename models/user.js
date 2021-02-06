@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.hasMany(models.Sheet)
     }
   };
   User.init({
@@ -19,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
-    data: DataTypes.TEXT
   }, {
     hooks: {
       beforeCreate: (instance) => {

@@ -1,3 +1,4 @@
 const userResolver = require('./user')
+const sheetResolver = require('./sheet')
 
-module.exports = [userResolver]
+module.exports = [userResolver, sheetResolver]
