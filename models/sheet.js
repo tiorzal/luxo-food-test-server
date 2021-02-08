@@ -15,7 +15,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Sheet.init({
-    title: DataTypes.STRING,
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: "can not be empty"
+        }
+      }
+    },
     data: DataTypes.TEXT,
     UserId: DataTypes.INTEGER
   }, {
