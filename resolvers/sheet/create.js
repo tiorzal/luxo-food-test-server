@@ -10,7 +10,6 @@ module.exports = authentication( async (_, args, { user }) => {
       data: args.data.data
     }
     const result = await Sheet.create(payload) 
-    console.log(result);
     return result
   } catch (error) {
     

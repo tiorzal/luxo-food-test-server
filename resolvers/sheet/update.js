@@ -4,7 +4,6 @@ const sheetAuthorization = require('../../middlewares/sheetAuthorization')
 
 module.exports = authentication( sheetAuthorization (
   async (_, args, { user }) => {
-    console.log(args, user);
 
     const payload = {
       data: args.data
