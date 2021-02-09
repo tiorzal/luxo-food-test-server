@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server')
 
+//input type and type for user
 module.exports = gql`
   input InputUser {
     email: String

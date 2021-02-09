@@ -1,6 +1,8 @@
 const { User } = require('../../models');
 const authentication = require('../../middlewares/authentication')
 
+//function to save user data into database
+//after refactoring, this function is not being use anymore
 module.exports = authentication(async (_, { data: dataSheet }, { user }) => {
   console.log('masuk');
   try {

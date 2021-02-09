@@ -1,6 +1,7 @@
 const { Sheet } = require('../../models')
 const authentication = require('../../middlewares/authentication')
 
+//create a new sheet for current logged in user
 module.exports = authentication( async (_, args, { user }) => {
   try {
     const { email, id } = user

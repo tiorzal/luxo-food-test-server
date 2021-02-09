@@ -2,6 +2,7 @@ const { AuthenticationError } = require('apollo-server');
 const { tokenVerify } = require('../helpers/jwtHelper');
 const { User } = require('../models');
 
+//aunthenticating incoming token, if its the right token i pass it into resolver else i send an error
 const authentication = (next) => async (root, args, context, info) => {
 
   const token = context.req.headers.token;

@@ -1,5 +1,6 @@
 const { User } = require('../../models');
 
+//function for register
 module.exports = async (_, args) => {
   try {
     console.log(args);

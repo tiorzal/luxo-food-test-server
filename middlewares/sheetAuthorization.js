@@ -3,6 +3,7 @@ const { User, Sheet } = require("../models");
 const { tokenVerify } = require("../helpers/jwtHelper");
 const { Op } = require("sequelize");
 
+//authorization for user only can edit their own data
 const authorization = (next) => async (root, args, ctx, info) => {
   const token = ctx.req.headers.token;
   const user = tokenVerify(token);
